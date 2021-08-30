@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <carbon.widget.LinearLayout
+        android:elevation="2dp"
+        app:carbon_cornerRadius="5dp"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <carbon.widget.LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <carbon.widget.TextView
+                android:id="@+id/tv_ct_kode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kategori"
+                android:textSize="12sp"
+                android:fontFamily="@font/lato_black"
+                android:textColor="@color/colorPrimary"
+                android:layout_margin="10dp"/>
+            <carbon.widget.TextView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:id="@+id/tv_ct_nama"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:fontFamily="@font/lato_black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="Title Berita"/>
+        </carbon.widget.LinearLayout>
+        <carbon.widget.ImageView
+            android:id="@+id/iv_ct_foto"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            app:carbon_cornerRadius="5dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_launcher_background"/>
+    </carbon.widget.LinearLayout>
+</carbon.widget.RelativeLayout>

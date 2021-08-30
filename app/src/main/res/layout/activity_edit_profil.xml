@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".view.Daftar">
+
+    <carbon.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryVariant"
+        android:orientation="horizontal"
+        app:carbon_elevation="5dp">
+
+        <carbon.widget.ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_24_white" />
+
+        <carbon.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Edit Profilku"
+            android:fontFamily="@font/lato_black"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </carbon.widget.LinearLayout>
+
+    <carbon.widget.ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp">
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Nama"
+                    android:fontFamily="@font/lato_regular"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_nik"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Nik"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                android:orientation="vertical"
+                app:carbon_cornerRadius="7dp">
+
+                <carbon.widget.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Jenis Kelamin"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/text_shadow"
+                    android:textSize="14sp" />
+
+                <carbon.widget.RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/rb_jk"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <carbon.widget.RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:text="Laki-laki"
+                        android:id="@+id/rb_l"
+                        android:checked="true"
+                        android:fontFamily="@font/lato_regular"
+                        android:textColor="@color/text_shadow"
+                        android:textSize="14sp" />
+
+                    <carbon.widget.RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:text="Perempuan"
+                        android:id="@+id/rb_p"
+                        android:fontFamily="@font/lato_regular"
+                        android:textColor="@color/text_shadow"
+                        android:textSize="14sp" />
+                </carbon.widget.RadioGroup>
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_telepon"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Telepon"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="70dp"
+                android:background="@color/button"
+                android:fontFamily="@font/lato_regular"
+                android:text="Simpan"
+                android:id="@+id/bt_simpan"
+                app:carbon_cornerRadius="7dp" />
+        </carbon.widget.LinearLayout>
+    </carbon.widget.ScrollView>
+</carbon.widget.LinearLayout>

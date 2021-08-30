@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".view.Daftar">
+
+    <carbon.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryVariant"
+        android:orientation="horizontal"
+        app:carbon_elevation="5dp">
+
+        <carbon.widget.ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_24_white" />
+
+        <carbon.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Daftar Karakterku"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lato_black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </carbon.widget.LinearLayout>
+
+    <carbon.widget.ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp">
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_nik"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="nik"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Username"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/lato_regular"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Nama"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                android:orientation="vertical"
+                app:carbon_cornerRadius="7dp">
+
+                <carbon.widget.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Jenis Kelamin"
+                    android:textColor="@color/text_shadow"
+                    android:textSize="14sp" />
+
+                <carbon.widget.RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/rb_jk"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <carbon.widget.RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:text="Laki-laki"
+                        android:id="@+id/rb_l"
+                        android:fontFamily="@font/lato_regular"
+                        android:checked="true"
+                        android:textColor="@color/text_shadow"
+                        android:textSize="14sp" />
+
+                    <carbon.widget.RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:text="Perempuan"
+                        android:fontFamily="@font/lato_regular"
+                        android:id="@+id/rb_p"
+                        android:textColor="@color/text_shadow"
+                        android:textSize="14sp" />
+                </carbon.widget.RadioGroup>
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_telepon"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Telepon"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF"
+                    android:hint="Email"
+                    android:fontFamily="@font/lato_regular"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <carbon.widget.LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F3F3F3"
+                app:carbon_cornerRadius="7dp"
+                android:orientation="vertical">
+                <carbon.widget.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tambah Foto"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/text_shadow"
+                    android:textSize="14sp" />
+                <carbon.widget.TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/tv_nama_foto"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+            </carbon.widget.LinearLayout>
+            <carbon.widget.ImageView
+                android:src="@drawable/ic_baseline_photo_camera_24"
+                android:layout_width="50dp"
+                android:layout_margin="10dp"
+                app:carbon_cornerRadius="7dp"
+                android:padding="10dp"
+                android:layout_height="match_parent"
+                android:background="@color/button"
+                android:id="@+id/iv_tambah_foto" />
+        </carbon.widget.LinearLayout>
+            <carbon.widget.Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="70dp"
+                android:fontFamily="@font/lato_regular"
+                android:background="@color/button"
+                android:text="Daftar"
+                android:id="@+id/bt_daftar"
+                app:carbon_cornerRadius="7dp" />
+        </carbon.widget.LinearLayout>
+    </carbon.widget.ScrollView>
+</carbon.widget.LinearLayout>

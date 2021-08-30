@@ -1,0 +1,29 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="13dp"
+    android:background="@drawable/form"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+    app:carbon_cornerRadius="10dp"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="5dp" />
+
+    <carbon.widget.TextView
+        android:layout_width="100dp"
+        android:text="Loading..."
+        android:textColor="@color/text_color"
+        android:fontFamily="@font/lato_black"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/loading_msg"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/loader" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

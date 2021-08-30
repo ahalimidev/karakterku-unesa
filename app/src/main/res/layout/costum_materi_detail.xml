@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <carbon.widget.LinearLayout
+        android:elevation="1dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryVariant"
+
+            android:orientation="horizontal">
+            <carbon.widget.TextView
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:id="@+id/tv_cmd_title"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/lato_black"
+
+                android:textAppearance="@style/carbon_TextAppearance.Body1"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TITLE MATERI"/>
+
+            <carbon.widget.TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_cmd_kode"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:fontFamily="@font/lato_black"
+
+                android:text="KODE-1B-A"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </carbon.widget.LinearLayout>
+        <carbon.widget.TextView
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/lato_regular"
+            android:id="@+id/tv_cmd_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="TITLE MATERI"
+            android:textAppearance="@style/carbon_TextAppearance.Body1"
+            android:textColor="@color/text_shadow"
+            android:textSize="14sp" />
+    </carbon.widget.LinearLayout>
+</carbon.widget.RelativeLayout>

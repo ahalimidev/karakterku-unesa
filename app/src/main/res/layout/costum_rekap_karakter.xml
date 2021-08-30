@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <carbon.widget.LinearLayout
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <carbon.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/tv_crk_kompetensi"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
+            android:text="Kompentensi"
+            android:textSize="14sp"
+            android:textColor="@color/text_black" />
+
+        <carbon.widget.TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/text_black" />
+
+        <carbon.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_crk_nilai"
+            android:textSize="14dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Nilai"
+            android:textColor="@color/text_black" />
+    </carbon.widget.LinearLayout>
+</carbon.widget.RelativeLayout>

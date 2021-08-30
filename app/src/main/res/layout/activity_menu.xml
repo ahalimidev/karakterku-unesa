@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryVariant"
+    android:orientation="vertical"
+    tools:context=".view.Menu">
+    <carbon.widget.LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <carbon.widget.ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/tut"/>
+        <carbon.widget.ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/kampusmerdeka"/>
+        <carbon.widget.ImageView
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/logo"/>
+
+    </carbon.widget.LinearLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <carbon.widget.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Hai,"
+                android:textColor="@color/white"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="20sp" />
+
+            <carbon.widget.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ahmad Halimi"
+                android:fontFamily="@font/lato_black"
+                android:id="@+id/nama"
+                android:textColor="@color/text_color_light"
+                android:textSize="20sp" />
+        </carbon.widget.LinearLayout>
+
+        <carbon.widget.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Apa Karaktermu Hari ini"
+            android:textColor="@color/text_shadow_light"
+            android:fontFamily="@font/lato_regular"
+
+            android:textSize="14sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <carbon.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        app:carbon_cornerRadiusTopEnd="35dp"
+        app:carbon_cornerRadiusTopStart="35dp">
+
+        <carbon.widget.ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="35dp"
+            android:scrollbars="none">
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <carbon.widget.TextView
+                    android:background="@color/text_color"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginBottom="-5dp"
+                    android:text="MENU"
+                    android:fontFamily="@font/lato_regular"
+                    app:carbon_cornerRadius="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+                <carbon.widget.LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true">
+
+                        <carbon.widget.LinearLayout
+                            android:id="@+id/ll_materi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <carbon.widget.ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_bookshelf"/>
+                            <carbon.widget.TextView
+                                android:layout_gravity="center"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/colorPrimaryVariant"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/lato_regular"
+
+                                android:text="Materi"/>
+                        </carbon.widget.LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true">
+
+                        <carbon.widget.LinearLayout
+                            android:id="@+id/ll_isu_terkini"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <carbon.widget.ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_newspaper"/>
+                            <carbon.widget.TextView
+                                android:layout_gravity="center"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/colorPrimaryVariant"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/lato_regular"
+
+                                android:text="Isu Terkini"/>
+                        </carbon.widget.LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true">
+
+                        <carbon.widget.LinearLayout
+                            android:id="@+id/ll_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <carbon.widget.ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_youtube"/>
+                            <carbon.widget.TextView
+                                android:layout_gravity="center"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/colorPrimaryVariant"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/lato_regular"
+
+                                android:text="Video"/>
+                        </carbon.widget.LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true">
+
+                        <carbon.widget.LinearLayout
+                            android:id="@+id/ll_test_krakterku"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <carbon.widget.ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_exam"/>
+                            <carbon.widget.TextView
+                                android:layout_gravity="center"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/colorPrimaryVariant"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Tes Karakterku"/>
+                        </carbon.widget.LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </carbon.widget.LinearLayout>
+                <carbon.widget.LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true">
+
+                        <carbon.widget.LinearLayout
+                            android:id="@+id/ll_histori"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <carbon.widget.ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_mind_mapping"/>
+                            <carbon.widget.TextView
+                                android:layout_gravity="center"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/colorPrimaryVariant"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/lato_regular"
+
+                                android:text="Histori"/>
+                        </carbon.widget.LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true">
+
+                        <carbon.widget.LinearLayout
+                            android:id="@+id/ll_tim_pengambang"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <carbon.widget.ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_newbie"/>
+                            <carbon.widget.TextView
+                                android:layout_gravity="center"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/colorPrimaryVariant"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/lato_regular"
+
+                                android:text="Tim Pengembang"/>
+                        </carbon.widget.LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true">
+
+                        <carbon.widget.LinearLayout
+                            android:id="@+id/ll_profil"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <carbon.widget.ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_man"/>
+                            <carbon.widget.TextView
+                                android:layout_gravity="center"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/colorPrimaryVariant"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/lato_regular"
+
+                                android:text="Profilku"/>
+                        </carbon.widget.LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true">
+
+                        <carbon.widget.LinearLayout
+                            android:id="@+id/ll_logout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <carbon.widget.ImageView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_logout"/>
+                            <carbon.widget.TextView
+                                android:layout_gravity="center"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_margin="5dp"
+                                android:fontFamily="@font/lato_regular"
+                                android:textColor="@color/colorPrimaryVariant"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Logout"/>
+                        </carbon.widget.LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </carbon.widget.LinearLayout>
+                <carbon.widget.TextView
+                    android:background="@color/colorPrimaryVariant"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="135dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="17dp"
+                    android:text="TENTANG APLIKASI"
+                    app:carbon_cornerRadius="5dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/gedung">
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:background="#66000000"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:elevation="1dp"
+                       android:orientation="vertical">
+                       <carbon.widget.TextView
+                           android:fontFamily="@font/lato_regular"
+                           android:id="@+id/tv_desc"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:padding="5dp"
+                           android:paddingBottom="30dp"
+                           android:textAppearance="@style/carbon_TextAppearance.Body1"
+                           android:textColor="@color/text_black"
+                           android:textSize="16sp" />
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </carbon.widget.LinearLayout>
+
+        </carbon.widget.ScrollView>
+    </carbon.widget.LinearLayout>
+
+</carbon.widget.LinearLayout>

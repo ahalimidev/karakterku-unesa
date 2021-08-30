@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".view.RekapKarakter">
+
+    <carbon.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryVariant"
+        android:orientation="horizontal">
+
+        <carbon.widget.TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lato_black"
+            android:text="Hasil Test Karakter"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </carbon.widget.LinearLayout>
+
+    <carbon.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryVariant"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <carbon.widget.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_bold"
+                android:text="Kompentensi"
+                android:textSize="14sp"
+                android:gravity="center"
+
+                android:textColor="@color/white" />
+
+            <carbon.widget.TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <carbon.widget.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:text="Nilai"
+                android:textSize="14sp"
+
+                android:textColor="@color/white" />
+        </carbon.widget.LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tampil"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:scrollbars="none" />
+        <carbon.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            app:carbon_cornerRadius="7dp"
+            android:fontFamily="@font/lato_bold"
+            android:id="@+id/bt_upload"
+            android:background="@color/text_color"
+            android:textColor="@color/white"
+            android:text="Konfirmasi"/>
+    </carbon.widget.LinearLayout>
+</carbon.widget.LinearLayout>

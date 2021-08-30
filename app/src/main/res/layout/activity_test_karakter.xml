@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryVariant"
+    android:orientation="vertical"
+    tools:context=".view.Materi">
+
+    <carbon.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryVariant"
+        android:orientation="horizontal">
+
+        <carbon.widget.ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_24_white" />
+
+        <carbon.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lato_black"
+            android:text="Soal"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </carbon.widget.LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/ulang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical"
+            app:carbon_cornerRadiusTopEnd="35dp"
+            app:carbon_cornerRadiusTopStart="35dp">
+
+            <carbon.widget.TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryVariant"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginTop="20dp"
+                android:text="1/50"
+                android:id="@+id/urutan"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                app:carbon_cornerRadius="7dp" />
+
+            <carbon.widget.TextView
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/lato_regular"
+                android:id="@+id/textsoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="TITLE MATERI"
+                android:textAppearance="@style/carbon_TextAppearance.Body1"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/tampil"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <carbon.widget.Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                app:carbon_cornerRadius="7dp"
+                android:fontFamily="@font/lato_bold"
+                android:id="@+id/bt_jawaban"
+                android:background="@color/text_shadow_light"
+                android:textColor="@color/white"
+                android:text="Lanjut"/>
+        </carbon.widget.LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</carbon.widget.LinearLayout>
