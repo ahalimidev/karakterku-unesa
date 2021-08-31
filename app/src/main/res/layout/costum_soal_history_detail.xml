@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <carbon.widget.TextView
+            android:id="@+id/tv_cshd_nomor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:fontFamily="@font/lato_regular"
+            android:text="Nomor"
+            android:textColor="@color/text_black" />
+
+        <carbon.widget.TextView
+            android:id="@+id/tv_cshd_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_regular"
+            android:text="Kesimpulan"
+            android:textColor="@color/text_black" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</carbon.widget.RelativeLayout>

@@ -16,6 +16,7 @@ class HistoriDetailAdapter(private val context: Context, results: ArrayList<hist
     RecyclerView.Adapter<HistoriDetailAdapter.ItemViewHolder>() {
 
     private var Items = ArrayList<histori_detail>()
+    private var rAdapter : HistoriDetailJawabanAdapter? = null
 
     init {
         this.Items = results
@@ -24,15 +25,13 @@ class HistoriDetailAdapter(private val context: Context, results: ArrayList<hist
 
     inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val fv_nametoc :TextView
-        val fv_namescoretype :TextView
-        val fv_descanswers :TextView
+        val tampil :RecyclerView
 
 
 
         init {
             fv_nametoc = itemView.findViewById(R.id.fv_nametoc)
-            fv_namescoretype = itemView.findViewById(R.id.fv_namescoretype)
-            fv_descanswers = itemView.findViewById(R.id.fv_descanswers)
+            tampil = itemView.findViewById(R.id.rv_csh_tampil)
 
         }
     }
@@ -47,8 +46,12 @@ class HistoriDetailAdapter(private val context: Context, results: ArrayList<hist
         val myHolder = holder
         val result = Items[position]
         myHolder.fv_nametoc.text = "${result.fv_nametoc}"
-        myHolder.fv_namescoretype.text = "${result.fv_namescoretype}"
-        myHolder.fv_descanswers.text = "${result.fv_descanswers}"
+        val linearLayoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        linearLayoutManager.scrollToPositionWithOffset(0, 0)
+        rAdapter = result.jawaban?.let { HistoriDetailJawabanAdapter(context, it) }
+        myHolder.tampil.setLayoutManager(linearLayoutManager)
+        myHolder.tampil.setAdapter(rAdapter)
+        rAdapter!!.notifyDataSetChanged()
 
     }
 

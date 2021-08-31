@@ -11,10 +11,10 @@ import java.io.FileOutputStream
 import java.io.IOException
 
 class FileCompressor(context: Context) {
-    private var maxWidth = 800
-    private var maxHeight = 800
+    private var maxWidth = 300
+    private var maxHeight = 200
     private var compressFormat = CompressFormat.JPEG
-    private var quality = 100
+    private var quality = 50
     private var destinationDirectoryPath = ""
 
     init {

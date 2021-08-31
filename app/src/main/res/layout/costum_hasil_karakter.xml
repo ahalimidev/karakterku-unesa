@@ -31,7 +31,6 @@
                 android:fontFamily="@font/lato_bold"
                 android:textSize="12sp"
                 android:text="Kompentensi"
-
                 android:textColor="@color/white" />
             <carbon.widget.Button
                 android:id="@+id/bt_chk_hasil"

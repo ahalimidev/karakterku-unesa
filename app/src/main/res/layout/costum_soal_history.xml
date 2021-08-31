@@ -7,60 +7,50 @@
         android:elevation="5dp"
         app:carbon_cornerRadius="5dp"
         android:layout_margin="5dp"
+        android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="vertical"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
-        <carbon.widget.LinearLayout
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <carbon.widget.TextView
-                android:id="@+id/fv_nametoc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/lato_regular"
-                android:textColor="@color/button"
-                android:text="Kompentensi"
-                />
-            <carbon.widget.TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/lato_regular"
-                android:textColor="@color/button"
-                android:text="  >  "
-                />
-            <carbon.widget.TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:id="@+id/fv_namescoretype"
-                android:textColor="@color/colorPrimary"
-                android:fontFamily="@font/lato_regular"
-                android:text="Kompentensi"
-                />
-        </carbon.widget.LinearLayout>
         <carbon.widget.TextView
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp"
+            android:id="@+id/fv_nametoc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:id="@+id/fv_descanswers"
             android:textStyle="bold"
             android:fontFamily="@font/lato_regular"
-            android:text="Kompentensi"
-            />
+            android:textColor="@color/colorPrimary"
+            android:text="Kompentensi" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/button"
+            android:orientation="horizontal">
+            <carbon.widget.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/white"
+                android:layout_weight="3.5"
+                android:text="Nomor"/>
+            <carbon.widget.TextView
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kesimpulan"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <carbon.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:id="@+id/rv_csh_tampil"/>
     </carbon.widget.LinearLayout>
 
 </carbon.widget.RelativeLayout>

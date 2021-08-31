@@ -10,12 +10,9 @@ class histori_detail{
     @Expose
     var fv_nametoc: String? = null
 
-    @SerializedName("fv_namescoretype")
-    @Expose
-    var fv_namescoretype: String? = null
 
-    @SerializedName("fv_descanswers")
+    @SerializedName("jawaban")
     @Expose
-    var fv_descanswers: String? = null
+    var jawaban: ArrayList<jawaban_detail>? = null
 
 }
