@@ -25,4 +25,12 @@ class materi{
     lateinit var scoretype_tb: ArrayList<materidetail>
 
 
+    @SerializedName("berita")
+    @Expose
+    lateinit var berita: ArrayList<berita>
+
+    @SerializedName("video")
+    @Expose
+    lateinit var video: ArrayList<video>
+
 }

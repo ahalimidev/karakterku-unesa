@@ -2,15 +2,19 @@ package com.izanacode.karakter.unesa.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.text.HtmlCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.izanacode.karakter.unesa.R
 import com.izanacode.karakter.unesa.model.data.materi
+import com.izanacode.karakter.unesa.utils.html2text
 import com.izanacode.karakter.unesa.view.MateriDetail
 import com.izanacode.karakter.unesa.view.berita
 import java.util.*
@@ -20,6 +24,7 @@ class MateriBeritaAdapter(private val context: Context, results: ArrayList<mater
     RecyclerView.Adapter<MateriBeritaAdapter.ItemViewHolder>() {
 
     private var Items = ArrayList<materi>()
+    private var rAdapter1 : BeritaImageAdapter? = null
 
     init {
         this.Items = results
@@ -31,32 +36,50 @@ class MateriBeritaAdapter(private val context: Context, results: ArrayList<mater
         val title :TextView
         val desc :TextView
         val lanjut : LinearLayout
+        val tampil : RecyclerView
+
 
 
         init {
-            kode = itemView.findViewById(R.id.tv_cm_kode)
-            title = itemView.findViewById(R.id.tv_cm_title)
-            desc = itemView.findViewById(R.id.tv_cm_desc)
-            lanjut = itemView.findViewById(R.id.ll_cm_lanjut)
+            kode = itemView.findViewById(R.id.tv_cmb_kode)
+            title = itemView.findViewById(R.id.tv_cmb_title)
+            desc = itemView.findViewById(R.id.tv_cmb_desc)
+            lanjut = itemView.findViewById(R.id.ll_cmb_lanjut)
+            tampil = itemView.findViewById(R.id.rv_cmb_tampil)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.costum_materi, null)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.costum_materi_berita, null)
 
         return ItemViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val myHolder = holder
         val result = Items[position]
-        myHolder.kode.text = result.fv_codetoc
-        myHolder.title.text = result.fv_nametoc
-        myHolder.desc.text = Html.fromHtml(Html.fromHtml(result.fv_desctoc).toString())
-        myHolder.lanjut.setOnClickListener {
-            context.startActivity(Intent(context,berita::class.java)
-                .putExtra("fn_tocid",result.fn_tocid)
-                .putExtra("fv_nametoc",result.fv_nametoc)
+        holder.kode.text = result.fv_codetoc
+        holder.title.text = result.fv_nametoc
+        holder.desc.text = html2text(
+            HtmlCompat.fromHtml(result.fv_desctoc.toString(), HtmlCompat.FROM_HTML_MODE_LEGACY)
+                .toString()
+        )
+        val linearLayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        linearLayoutManager.scrollToPositionWithOffset(0, 0)
+
+
+
+        rAdapter1 = result.berita?.let { BeritaImageAdapter(context, it) }
+        holder.tampil.setLayoutManager(linearLayoutManager)
+        holder.tampil.setAdapter(rAdapter1)
+        rAdapter1!!.notifyDataSetChanged()
+
+
+
+        holder.lanjut.setOnClickListener {
+            context.startActivity(
+                Intent(context, berita::class.java)
+                    .putExtra("fn_tocid", result.fn_tocid)
+                    .putExtra("fv_nametoc", result.fv_nametoc)
 
             )
         }

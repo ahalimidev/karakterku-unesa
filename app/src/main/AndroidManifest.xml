@@ -19,78 +19,96 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ok"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.Kuesioner"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.History"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"/>
-        <activity android:name=".view.HistoryDetail"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"/>
-        <activity android:name=".view.MateriVideo"
+        <activity
+            android:name=".view.pdf"
+            android:exported="true" />
+        <activity
+            android:name=".view.History"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
-            />
-        <activity android:name=".view.MateriBerita"
+            android:exported="true"/>
+        <activity
+            android:name=".view.HistoryDetail"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
-        <activity android:name=".view.RekapKarakter"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:exported="true"/>
+        <activity
+            android:name=".view.MateriVideo"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
-        <activity android:name=".view.TestKarakter"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:exported="true"/>
+        <activity
+            android:name=".view.MateriBerita"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
-        <activity android:name=".view.TimPengambang"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:exported="true"/>
+        <activity
+            android:name=".view.RekapKarakter"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
-        <activity android:name=".view.Video"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:exported="true"/>
+        <activity
+            android:name=".view.TestKarakter"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:exported="true"/>
+        <activity
+            android:name=".view.TimPengambang"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"  android:exported="true"/>
+        <activity
+            android:name=".view.Video"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" android:exported="true" />
         <activity
             android:name=".view.VideoWebview"
             android:screenOrientation="landscape"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" android:exported="true" />
         <activity
             android:name=".view.BeritaWebView"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"  android:exported="true"/>
         <activity
             android:name=".view.berita"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"  android:exported="true"/>
         <activity
             android:name=".view.MateriDetail"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" android:exported="true" />
         <activity
             android:name=".view.Materi"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" android:exported="true"/>
         <activity
             android:name=".view.EditProfil"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"  android:exported="true"/>
         <activity
             android:name=".view.profil"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"  android:exported="true"/>
         <activity
             android:name=".view.Menu"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"  android:exported="true"/>
         <activity
             android:name=".view.LupaPassword"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" android:exported="true"/>
         <activity
             android:name=".view.Daftar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"  android:exported="true"/>
         <activity
             android:name=".view.Login"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"  android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing">
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

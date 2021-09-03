@@ -33,6 +33,17 @@
                 android:text="Kompentensi"
                 android:textColor="@color/white" />
             <carbon.widget.Button
+                android:id="@+id/bt_chk_pdf"
+                android:textColor="@color/white"
+                android:background="@color/button"
+                android:textSize="12sp"
+                app:carbon_cornerRadius="7dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="PDF"/>
+            <carbon.widget.Button
                 android:id="@+id/bt_chk_hasil"
                 android:textColor="@color/white"
                 android:background="@color/text_color"

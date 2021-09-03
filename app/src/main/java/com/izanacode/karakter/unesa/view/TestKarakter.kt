@@ -11,6 +11,7 @@ import android.text.Html
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.core.text.HtmlCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.izanacode.karakter.unesa.R
@@ -19,6 +20,7 @@ import com.izanacode.karakter.unesa.databinding.ActivityTestKarakterBinding
 import com.izanacode.karakter.unesa.model.Jawaban
 import com.izanacode.karakter.unesa.model.Soal
 import com.izanacode.karakter.unesa.server.DatabaseHandler
+import com.izanacode.karakter.unesa.utils.html2text
 import com.izanacode.karakter.unesa.utils.progressDialog
 import com.izanacode.karakter.unesa.viewmodel.soalViewModel
 
@@ -98,7 +100,9 @@ class TestKarakter : AppCompatActivity(), SQLITEJawabanAdapter.AdapterCallback {
             }
             fn_examid = ok.getString(0)
             tampil_jawaban(fn_examid)
-            binding.textsoal.text = Html.fromHtml(Html.fromHtml(ok.getString(4)).toString())
+            binding.textsoal.text = html2text(
+                HtmlCompat.fromHtml(ok.getString(4), HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    .toString())
 
         }else{
             vm.rekapaktif(this)

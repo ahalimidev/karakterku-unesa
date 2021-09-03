@@ -105,4 +105,14 @@ interface Api {
     suspend fun tampiljawaban(
         @Path("fn_examresults") fn_examresults : String
     ): Response<histori_detail>
+
+    @GET("/data/cari/user/{fn_examresults}")
+    suspend fun jawaban_user(
+        @Path("fn_examresults") fn_examresults : String
+    ): Response<rekap>
+
+    @GET("/data/pdf/{fn_examresults}")
+    suspend fun pdf(
+        @Path("fn_examresults") fn_examresults : String
+    ): Response<pdf>
 }

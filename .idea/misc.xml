@@ -3,11 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/karakter/app/src/main/res/layout/activity_berita_web_view.xml" value="0.55" />
         <entry key="..\:/karakter/app/src/main/res/layout/activity_materi_berita.xml" value="0.21296296296296297" />
         <entry key="..\:/karakter/app/src/main/res/layout/activity_menu.xml" value="0.5" />
-        <entry key="..\:/karakter/app/src/main/res/layout/costum_hasil_karakter.xml" value="0.33" />
+        <entry key="..\:/karakter/app/src/main/res/layout/activity_pdf.xml" value="0.33" />
+        <entry key="..\:/karakter/app/src/main/res/layout/activity_rekap_karakter.xml" value="0.3078125" />
+        <entry key="..\:/karakter/app/src/main/res/layout/costum_berita.xml" value="0.55" />
+        <entry key="..\:/karakter/app/src/main/res/layout/costum_fofo.xml" value="0.33" />
+        <entry key="..\:/karakter/app/src/main/res/layout/costum_hasil_karakter.xml" value="0.67" />
+        <entry key="..\:/karakter/app/src/main/res/layout/costum_materi.xml" value="0.55" />
+        <entry key="..\:/karakter/app/src/main/res/layout/costum_materi_berita.xml" value="0.55" />
+        <entry key="..\:/karakter/app/src/main/res/layout/costum_materi_video.xml" value="0.55" />
+        <entry key="..\:/karakter/app/src/main/res/layout/costum_soal.xml" value="0.3078125" />
         <entry key="..\:/karakter/app/src/main/res/layout/costum_soal_history.xml" value="0.36666666666666664" />
         <entry key="..\:/karakter/app/src/main/res/layout/costum_soal_history_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/karakter/app/src/main/res/layout/costum_video.xml" value="0.55" />
       </map>
     </option>
   </component>

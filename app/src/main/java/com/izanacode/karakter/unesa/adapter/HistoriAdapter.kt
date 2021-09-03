@@ -1,7 +1,10 @@
 package com.izanacode.karakter.unesa.adapter
 
+import android.Manifest
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,6 +12,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import carbon.widget.Button
 import com.github.mikephil.charting.charts.PieChart
@@ -23,6 +29,9 @@ import com.izanacode.karakter.unesa.model.data.histori
 import com.izanacode.karakter.unesa.view.HistoryDetail
 import java.util.*
 import com.github.mikephil.charting.components.Legend
+import com.izanacode.karakter.unesa.view.pdf
+import com.izanacode.karakter.unesa.viewmodel.materiViewModel
+import com.izanacode.karakter.unesa.viewmodel.soalViewModel
 import java.text.DateFormat
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -32,6 +41,7 @@ class HistoriAdapter(private val context: Context, results: ArrayList<histori>) 
     RecyclerView.Adapter<HistoriAdapter.ItemViewHolder>() {
 
     private var Items = ArrayList<histori>()
+    lateinit var vm : materiViewModel
 
     init {
         this.Items = results
@@ -40,6 +50,7 @@ class HistoriAdapter(private val context: Context, results: ArrayList<histori>) 
 
     inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tanggal :TextView
+        val pdf : Button
         val detail : Button
         val chart: PieChart
 
@@ -47,6 +58,7 @@ class HistoriAdapter(private val context: Context, results: ArrayList<histori>) 
         init {
             tanggal = itemView.findViewById(R.id.tv_chk_tanggal)
             detail = itemView.findViewById(R.id.bt_chk_hasil)
+            pdf = itemView.findViewById(R.id.bt_chk_pdf)
             chart = itemView.findViewById(R.id.fragment_verticalbarchart_chart);
 
         }
@@ -65,10 +77,16 @@ class HistoriAdapter(private val context: Context, results: ArrayList<histori>) 
 
         myHolder.tanggal.text = "Tanggal : ${result.fv_date}"
         myHolder.detail.setOnClickListener {
-
             context.startActivity(Intent(context, HistoryDetail::class.java)
                 .putExtra("fn_examresults",result.fn_examresults)
             )
+        }
+        myHolder.pdf.setOnClickListener {
+            if(checkAndRequestPermissions()){
+                context.startActivity(Intent(context,pdf::class.java).putExtra("fn_examresults",result.fn_examresults))
+            }else{
+                checkAndRequestPermissions()
+            }
         }
 
         //pupulating list of PieEntires
@@ -102,7 +120,28 @@ class HistoriAdapter(private val context: Context, results: ArrayList<histori>) 
 
 
     }
-
+    private fun checkAndRequestPermissions(): Boolean {
+        val camera = ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA)
+        val storage = ContextCompat.checkSelfPermission(context,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+        )
+        val listPermissionsNeeded: MutableList<String> = ArrayList()
+        if (camera != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.CAMERA)
+        }
+        if (storage != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        }
+        if (!listPermissionsNeeded.isEmpty()) {
+            ActivityCompat.requestPermissions(
+                context as Activity,
+                listPermissionsNeeded.toTypedArray(),
+                1
+            )
+            return false
+        }
+        return true
+    }
     override fun getItemCount(): Int {
         return Items.size
     }

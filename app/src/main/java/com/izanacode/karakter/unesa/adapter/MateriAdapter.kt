@@ -8,9 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.izanacode.karakter.unesa.R
 import com.izanacode.karakter.unesa.model.data.materi
+import com.izanacode.karakter.unesa.utils.html2text
 import com.izanacode.karakter.unesa.view.MateriDetail
 import java.util.*
 
@@ -51,7 +53,8 @@ class MateriAdapter(private val context: Context, results: ArrayList<materi>) :
         val result = Items[position]
         myHolder.kode.text = result.fv_codetoc
         myHolder.title.text = result.fv_nametoc
-        myHolder.desc.text = Html.fromHtml(Html.fromHtml(result.fv_desctoc).toString())
+        myHolder.desc.text = html2text(HtmlCompat.fromHtml(result.fv_desctoc.toString(),HtmlCompat.FROM_HTML_MODE_LEGACY)
+            .toString())
         myHolder.lanjut.setOnClickListener {
             context.startActivity(Intent(context,MateriDetail::class.java)
                 .putExtra("fn_tocid",result.fn_tocid)

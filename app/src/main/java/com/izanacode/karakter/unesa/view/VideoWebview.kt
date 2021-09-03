@@ -32,7 +32,6 @@ class VideoWebview : AppCompatActivity() {
             showWebView()
 
         }else{
-            Toast.makeText(this@VideoWebview,"Gangguan jaringan", Toast.LENGTH_LONG).show()
             finish()
         }
 
@@ -89,7 +88,6 @@ class VideoWebview : AppCompatActivity() {
                 }catch (e : Exception){
 
                 }
-                Toast.makeText(this@VideoWebview,"Gangguan jaringan", Toast.LENGTH_LONG).show()
             }
         }
     }

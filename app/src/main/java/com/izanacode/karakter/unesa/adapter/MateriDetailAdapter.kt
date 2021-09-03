@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.izanacode.karakter.unesa.R
 import com.izanacode.karakter.unesa.model.data.materidetail
+import com.izanacode.karakter.unesa.utils.html2text
 import java.util.*
 
 
@@ -46,7 +48,9 @@ class MateriDetailAdapter(private val context: Context, results: ArrayList<mater
         val result = Items[position]
         myHolder.kode.text = result.fv_codescoretype
         myHolder.title.text = result.fv_namescoretype
-        myHolder.desc.text = Html.fromHtml(Html.fromHtml(result.fv_descscoretype).toString())
+        myHolder.desc.text =  html2text(
+            HtmlCompat.fromHtml(result.fv_descscoretype.toString(), HtmlCompat.FROM_HTML_MODE_LEGACY)
+                .toString())
 
     }
 

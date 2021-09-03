@@ -4,7 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
+import android.text.Spannable
+import android.text.SpannableString
 import android.util.Log
+import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.izanacode.karakter.unesa.databinding.ActivityMenuBinding
@@ -62,21 +65,14 @@ class Menu : AppCompatActivity() {
         tampil()
     }
 
-    override fun onResume() {
-        super.onResume()
-        if(vm2.rekap(this)){
-            startActivity(Intent(this@Menu,RekapKarakter::class.java))
-        }else{
-
-        }
-    }
     private fun tampil() {
         lifecycleScope.launch {
             try {
                 val authResponse = vm1.dashboard_tampil()
                 if (authResponse.body()!!.success == 1) {
                     val result = authResponse.body()!!.data
-                    binding.tvDesc.text = Html.fromHtml(Html.fromHtml(result.fv_desc).toString())
+
+                    binding.tvDesc.text = result.fv_desc
                 }
             } catch (throwable: Throwable) {
                 Log.e("ERROR", throwable.toString())

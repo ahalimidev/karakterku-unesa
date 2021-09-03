@@ -5,9 +5,11 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.izanacode.karakter.unesa.R
 import com.izanacode.karakter.unesa.model.Soal
+import com.izanacode.karakter.unesa.utils.html2text
 import java.util.*
 
 
@@ -39,7 +41,9 @@ class SQLITEJawabanAdapter(private val context: Context, results: ArrayList<Soal
         val myHolder = holder
         val result = Items[position]
 
-        myHolder.pilih.text = Html.fromHtml(Html.fromHtml(result.fv_descanswers).toString())
+        myHolder.pilih.text =   html2text(
+            HtmlCompat.fromHtml(result.fv_descanswers.toString(), HtmlCompat.FROM_HTML_MODE_LEGACY)
+                .toString())
 
         if (checkedPosition == -1) {
             myHolder.pilih.setChecked(false);

@@ -1,10 +1,12 @@
 package com.izanacode.karakter.unesa.model.respon
 
+import com.izanacode.karakter.unesa.model.data.team
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import com.izanacode.karakter.unesa.model.data.materi
+import com.izanacode.karakter.unesa.model.data.rekap
+import java.util.ArrayList
 
-class soal {
+class rekap {
     @SerializedName("success")
     @Expose
     var success: Int = 0
@@ -13,8 +15,7 @@ class soal {
     @Expose
     lateinit var message: String
 
-
     @SerializedName("data")
     @Expose
-    lateinit var data: ArrayList<materi>
+    lateinit var data: ArrayList<rekap>
 }

@@ -34,7 +34,6 @@ class BeritaWebView : AppCompatActivity() {
             showWebView()
 
         }else{
-           Toast.makeText(this@BeritaWebView,"Gangguan jaringan",Toast.LENGTH_LONG).show()
             finish()
         }
 
@@ -87,7 +86,6 @@ class BeritaWebView : AppCompatActivity() {
                 }catch (e : Exception){
 
                 }
-                Toast.makeText(this@BeritaWebView,"Gangguan jaringan",Toast.LENGTH_LONG).show()
             }
         }
     }

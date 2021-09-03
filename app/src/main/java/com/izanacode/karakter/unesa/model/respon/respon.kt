@@ -8,6 +8,11 @@ class respon {
     @Expose
     var success: Int = 0
 
+    @SerializedName("data")
+    @Expose
+    var data : String? = null
+
+
     @SerializedName("message")
     @Expose
     lateinit var message: String

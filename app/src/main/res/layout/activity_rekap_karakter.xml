@@ -89,6 +89,6 @@
             android:id="@+id/bt_upload"
             android:background="@color/text_color"
             android:textColor="@color/white"
-            android:text="Konfirmasi"/>
+            android:text="Selesai"/>
     </carbon.widget.LinearLayout>
 </carbon.widget.LinearLayout>

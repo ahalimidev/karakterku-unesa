@@ -29,5 +29,9 @@ class materiViewModel : ViewModel() {
     ) = withContext(Dispatchers.Main) {
         api.materi_detail(fn_tocid)
     }
+
+    suspend fun pdf(fn_examresults : String) = withContext(Dispatchers.Main) {
+        api.pdf(fn_examresults)
+    }
 }
 

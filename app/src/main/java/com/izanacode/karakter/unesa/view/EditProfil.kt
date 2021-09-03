@@ -33,6 +33,7 @@ class EditProfil : AppCompatActivity() {
                 jk = "P"
             }
         }
+
         binding.btSimpan.setOnClickListener {
            if (binding.etNama.text.toString().isNullOrEmpty()) {
                 binding.etNama.requestFocus()

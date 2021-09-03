@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
 import android.util.Log
+import androidx.core.text.HtmlCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.izanacode.karakter.unesa.adapter.MateriDetailAdapter
 import com.izanacode.karakter.unesa.databinding.ActivityMateriDetailBinding
+import com.izanacode.karakter.unesa.utils.html2text
 import com.izanacode.karakter.unesa.utils.progressDialog
 import com.izanacode.karakter.unesa.viewmodel.materiViewModel
 import kotlinx.coroutines.launch
@@ -27,7 +29,10 @@ class MateriDetail : AppCompatActivity() {
         vm = ViewModelProvider(this).get(materiViewModel::class.java)
         dialog = progressDialog(this@MateriDetail)
         binding.tvTitle.text = intent.getStringExtra("fv_nametoc").toString()
-        binding.tvDe.text = Html.fromHtml(Html.fromHtml(intent.getStringExtra("fv_desctoc")).toString())
+        binding.tvDe.text =  html2text(
+            HtmlCompat.fromHtml(intent.getStringExtra("fv_desctoc").toString(), HtmlCompat.FROM_HTML_MODE_LEGACY)
+                .toString())
+
 
         tampil_materi()
         binding.ulang.setOnRefreshListener {

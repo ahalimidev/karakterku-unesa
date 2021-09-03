@@ -21,17 +21,7 @@ class soalViewModel : ViewModel() {
         editor.commit()
 
     }
-    fun rekapselesai(context: Context) {
-        var sharedPreferences = context.getSharedPreferences("App", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putBoolean("rekap", false)
-        editor.commit()
 
-    }
-    fun rekap( context: Context): Boolean {
-        var sharedPreferences = context.getSharedPreferences("App", Context.MODE_PRIVATE)
-        return sharedPreferences.getBoolean("rekap", false)
-    }
     suspend fun simpanjawaban(data : String) = withContext(Dispatchers.IO) {
         api.simpanjawaban(data)
     }
@@ -42,6 +32,10 @@ class soalViewModel : ViewModel() {
 
     suspend fun tampiljawaban(fn_examresults: String) = withContext(Dispatchers.Main) {
         api.tampiljawaban(fn_examresults)
+    }
+
+    suspend fun rekphasil(fn_examresults: String) = withContext(Dispatchers.Main) {
+        api.jawaban_user(fn_examresults)
     }
 }
 

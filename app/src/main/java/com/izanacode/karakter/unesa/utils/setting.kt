@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
+import org.jsoup.Jsoup
 
 
 fun Activity.makeStatusBarTransparent() {
@@ -55,4 +56,9 @@ fun tidakada(data :String, context: Context){
     }
     val alertDialog = builder.create()
     alertDialog.show()
+}
+
+
+fun html2text(html: String?): String? {
+    return Jsoup.parse(html).text()
 }
