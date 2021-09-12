@@ -16,6 +16,18 @@
             android:layout_width="match_parent"
             android:layout_margin="20dp"
             android:layout_height="250dp" />
+        <carbon.widget.TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="12sp"
+            android:text="PDF dapat dilihat maksimal 1 x 24 jam"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_shadow" />
         <carbon.widget.LinearLayout
             android:background="@color/colorPrimaryVariant"
             android:layout_width="match_parent"

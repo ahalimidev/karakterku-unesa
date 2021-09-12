@@ -16,13 +16,6 @@ import android.os.StrictMode
 import android.os.StrictMode.VmPolicy
 import com.izanacode.karakter.unesa.utils.DownloadTask
 
-
-
-
-
-
-
-
 class pdf : AppCompatActivity() {
 
     lateinit var vm : materiViewModel
@@ -40,16 +33,8 @@ class pdf : AppCompatActivity() {
     private fun tampil_materi (){
         lifecycleScope.launch {
             try {
-                val authResponse = vm.pdf(intent.getStringExtra("fn_examresults").toString())
-                if (authResponse.body()!!.success == 1) {
-                    val awaw = authResponse.body()!!.data
-                    val s = "https://karakterku.com/asset/pdf/$awaw"
-                    DownloadTask(this@pdf, s)
-                }else{
-                    finish()
-                    Toast.makeText(this@pdf,authResponse.body()!!.message,Toast.LENGTH_LONG).show()
-
-                }
+                val s = "https://api.karakterku.com/pdf/?result="+intent.getStringExtra("fn_examresults").toString()
+                DownloadTask(this@pdf, s)
             } catch (throwable: Throwable) {
                 Log.e("ERROR",throwable.toString())
             }

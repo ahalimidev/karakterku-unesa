@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Daftar Karakterku"
+            android:text="Daftar E-CHAR"
             android:textColor="@color/white"
             android:fontFamily="@font/lato_black"
             android:textSize="16sp"

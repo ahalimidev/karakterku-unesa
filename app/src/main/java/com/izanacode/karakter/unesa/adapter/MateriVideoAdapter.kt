@@ -24,7 +24,6 @@ class MateriVideoAdapter(private val context: Context, results: ArrayList<materi
     RecyclerView.Adapter<MateriVideoAdapter.ItemViewHolder>() {
 
     private var Items = ArrayList<materi>()
-    private var rAdapter1 : VideoImageAdapter? = null
 
     init {
         this.Items = results
@@ -36,7 +35,6 @@ class MateriVideoAdapter(private val context: Context, results: ArrayList<materi
         val title :TextView
         val desc :TextView
         val lanjut : LinearLayout
-        val tampil : RecyclerView
 
 
         init {
@@ -44,7 +42,6 @@ class MateriVideoAdapter(private val context: Context, results: ArrayList<materi
             title = itemView.findViewById(R.id.tv_cmv_title)
             desc = itemView.findViewById(R.id.tv_cmv_desc)
             lanjut = itemView.findViewById(R.id.ll_cmv_lanjut)
-            tampil = itemView.findViewById(R.id.rv_cmv_tampil)
         }
     }
 
@@ -66,12 +63,6 @@ class MateriVideoAdapter(private val context: Context, results: ArrayList<materi
         val linearLayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         linearLayoutManager.scrollToPositionWithOffset(0, 0)
 
-
-
-        rAdapter1 = result.video?.let { VideoImageAdapter(context, it) }
-        holder.tampil.setLayoutManager(linearLayoutManager)
-        holder.tampil.setAdapter(rAdapter1)
-        rAdapter1!!.notifyDataSetChanged()
 
         myHolder.lanjut.setOnClickListener {
             context.startActivity(Intent(context,Video::class.java)

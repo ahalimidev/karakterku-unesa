@@ -24,7 +24,6 @@ class MateriBeritaAdapter(private val context: Context, results: ArrayList<mater
     RecyclerView.Adapter<MateriBeritaAdapter.ItemViewHolder>() {
 
     private var Items = ArrayList<materi>()
-    private var rAdapter1 : BeritaImageAdapter? = null
 
     init {
         this.Items = results
@@ -36,7 +35,6 @@ class MateriBeritaAdapter(private val context: Context, results: ArrayList<mater
         val title :TextView
         val desc :TextView
         val lanjut : LinearLayout
-        val tampil : RecyclerView
 
 
 
@@ -45,7 +43,6 @@ class MateriBeritaAdapter(private val context: Context, results: ArrayList<mater
             title = itemView.findViewById(R.id.tv_cmb_title)
             desc = itemView.findViewById(R.id.tv_cmb_desc)
             lanjut = itemView.findViewById(R.id.ll_cmb_lanjut)
-            tampil = itemView.findViewById(R.id.rv_cmb_tampil)
         }
     }
 
@@ -65,15 +62,6 @@ class MateriBeritaAdapter(private val context: Context, results: ArrayList<mater
         )
         val linearLayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         linearLayoutManager.scrollToPositionWithOffset(0, 0)
-
-
-
-        rAdapter1 = result.berita?.let { BeritaImageAdapter(context, it) }
-        holder.tampil.setLayoutManager(linearLayoutManager)
-        holder.tampil.setAdapter(rAdapter1)
-        rAdapter1!!.notifyDataSetChanged()
-
-
 
         holder.lanjut.setOnClickListener {
             context.startActivity(

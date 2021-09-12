@@ -28,7 +28,7 @@
         <carbon.widget.TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="karakterku"
+            android:text="E-CHAR"
             android:textAppearance="@style/carbon_TextAppearance.Body2"
             android:textColor="@color/text_color"
             android:fontFamily="@font/lato_bold"

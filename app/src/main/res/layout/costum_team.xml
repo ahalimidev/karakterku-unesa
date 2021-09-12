@@ -14,19 +14,11 @@
         android:orientation="horizontal">
 
         <carbon.widget.LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <carbon.widget.TextView
-                android:id="@+id/tv_ct_kode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Kategori"
-                android:textSize="12sp"
-                android:fontFamily="@font/lato_black"
-                android:textColor="@color/colorPrimary"
-                android:layout_margin="10dp"/>
             <carbon.widget.TextView
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"

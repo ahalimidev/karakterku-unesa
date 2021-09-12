@@ -66,9 +66,12 @@ class DownloadTask(private val context: Context, downloadUrl: String) {
         AlertDialog.Builder(context)
             .setTitle("Document")
             .setMessage("Document Downloaded Successfully")
-            .setPositiveButton("Open") { dialog, which -> openDownloadedAttachment(downloadID) } // A null listener allows the button to dismiss the dialog and take no further action.
-            .setNegativeButton(R.string.no) { dialog: DialogInterface?, which: Int -> (context as Activity).finish() }
-            .setIcon(R.drawable.ic_dialog_alert)
+            .setPositiveButton("Open") { dialog, which ->
+                openDownloadedAttachment(downloadID)
+            } // A null listener allows the button to dismiss the dialog and take no further action.
+            .setNegativeButton(R.string.no) {
+                    dialog: DialogInterface?, which: Int -> (context as Activity).finish()
+            }
             .show()
         context.unregisterReceiver(onDownloadComplete)
     }
@@ -98,6 +101,7 @@ class DownloadTask(private val context: Context, downloadUrl: String) {
                     Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_ACTIVITY_CLEAR_TOP
                 try {
                     context.startActivity(pdfIntent)
+                    (context as Activity).finish()
                 } catch (e: ActivityNotFoundException) {
                     Toast.makeText(
                         context,
@@ -116,9 +120,8 @@ class DownloadTask(private val context: Context, downloadUrl: String) {
 
     init {
         downloadFileUrl = downloadUrl
-        downloadFileName =
-            downloadFileUrl.substring(downloadFileUrl.lastIndexOf('/') + 1) //Create file name by picking download file name from URL
-        Log.e(TAG, downloadFileName)
+        downloadFileName = "Laporan Test E-Char.pdf"
+        Log.e(TAG, downloadFileUrl)
         context.registerReceiver(
             onDownloadComplete,
             IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE)

@@ -27,13 +27,11 @@ class TeamAdapter(private val context: Context, results: ArrayList<team>) :
     }
 
     inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val code :TextView
         val nama :TextView
         val foto :ImageView
 
 
         init {
-            code = itemView.findViewById(R.id.tv_ct_kode)
             nama = itemView.findViewById(R.id.tv_ct_nama)
             foto = itemView.findViewById(R.id.iv_ct_foto)
 
@@ -49,7 +47,6 @@ class TeamAdapter(private val context: Context, results: ArrayList<team>) :
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val myHolder = holder
         val result = Items[position]
-        myHolder.code.text = result.fv_code
         myHolder.nama.text = result.fv_name
         Glide.with(context)
             .load("https://karakterku.com/asset/img/team/"+result.fv_picture)
